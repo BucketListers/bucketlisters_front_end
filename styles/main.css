@@ -12,26 +12,27 @@ body {
   background-color: #118C4E;
 }
 
-#nav-login-button {
-  display: inline;
-  background-color: red;
-}
-
 #login-button-text {
+  display: inline-block;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   color: #FFFFFF;
-}
-
-#nav-logout-button {
-  display: none;
   background-color: #585858;
 }
 
 #logout-button-text {
+  display: none;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   color: #FFFFFF;
+  background-color: #585858;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-top: -20px;
+  background-image: url("paper.gif");
+  background-color: #cccccc;
 }
 
 #landing-page-headline {
@@ -46,20 +47,18 @@ body {
   color: #585858;
 }
 
+#landing-page-buttons {
+  margin: 0 auto;
+}
+
 #landing-page-login-button {
   background-color: #FF9009;
   border-color: #FF9009;
-
 }
 
 #landing-page-reg-button {
   background-color: #FF9009;
   border-color: #FF9009;
-}
-
-.jumbotron {
-  text-align: center;
-  margin-top: -20px;
 }
 
 .landing-page-col-text {
