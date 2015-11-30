@@ -73,7 +73,7 @@ body {
   :: Login Form Section
   -------------------------------------------------- */
 #login-form {
-  display: inline;
+  display: none;
 }
 
 #login {
@@ -84,38 +84,33 @@ body {
   margin: 0 auto;
 }
 #login h1 {
-  color: #1fa67b;
-  font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 20px;
+  color: #118C4E;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
 #login .form-group {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 #login .btn.btn-custom {
-    font-size: 14px;
+  font-size: 16px;
   margin-bottom: 20px;
-}
-#login .forget {
-    font-size: 13px;
-  text-align: center;
-  display: block;
 }
 
 /*    --------------------------------------------------
   :: Login Form Inputs & Buttons
   -------------------------------------------------- */
 .form-control {
-    color: #212121;
+  color: #212121;
 }
 .btn-custom {
-    color: #fff;
-  background-color: #1fa67b;
+  color: #fff;
+  background-color: #FF9009;
 }
 .btn-custom:hover,
 .btn-custom:focus {
-    color: #fff;
+  color: #fff;
 }
 
 
@@ -123,79 +118,42 @@ body {
   :: Registration Form Section
   -------------------------------------------------- */
 #registration-form {
-  display: inline;
+  display: none;
 }
 
-#login {
+#register {
   padding-top: 50px;
 }
-#login .form-wrap {
+#register .form-wrap {
   width: 30%;
   margin: 0 auto;
 }
-#login h1 {
-  color: #1fa67b;
-  font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 20px;
-}
-#login .form-group {
-    margin-bottom: 25px;
-}
-#login .checkbox {
-    margin-bottom: 20px;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-#login .checkbox.show:before {
-    content: '\e013';
-    color: #1fa67b;
-    font-size: 17px;
-    margin: 1px 0 0 3px;
-    position: absolute;
-    pointer-events: none;
-    font-family: 'Glyphicons Halflings';
-}
-#login .checkbox .character-checkbox {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    vertical-align: middle;
-    display: inline-block;
-}
-#login .checkbox .label {
-    color: #6d6d6d;
-    font-size: 13px;
-    font-weight: normal;
-}
-#login .btn.btn-custom {
-    font-size: 14px;
-  margin-bottom: 20px;
-}
-#login .forget {
-    font-size: 13px;
+#register h1 {
+  color: #118C4E;
+  font-size: 20px;
   text-align: center;
-  display: block;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+#register .form-group {
+  margin-bottom: 25px;
+}
+#register .btn.btn-custom {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 /*    --------------------------------------------------
   :: Registration Form Inputs & Buttons
   -------------------------------------------------- */
 .form-control {
-    color: #212121;
+  color: #212121;
 }
 .btn-custom {
-    color: #fff;
-  background-color: #1fa67b;
+  color: #fff;
+  background-color: #FF9009;
 }
 .btn-custom:hover,
 .btn-custom:focus {
-    color: #fff;
+  color: #fff;
 }
