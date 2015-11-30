@@ -12,7 +12,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="main.css" rel="stylesheet">
+    <link href="./styles/main.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -32,7 +32,8 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
           <ul class="nav navbar-nav navbar-right">
-          <li class="active" id="nav-login-button"><a href="#">Log In<span class="sr-only">(current)</span></a></li>
+          <li class="active" ><a href="#" id="login-button-text">Log In<span class="sr-only" id="nav-login-button">(current)</span></a></li>
+          <li class="active" id="nav-logout-button"><a href="#" id="logout-button-text">Log Out<span class="sr-only">(current)</span></a></li>
           </ul>
       </div><!-- /.container-fluid -->
     </nav>
@@ -43,10 +44,10 @@
       <p id="landing-page-subhead">Start planning now for a more fulfilling future!</p>
     <div class="row">
       <div class="col-lg-12">
-        <div class="col-lg-6">
+        <div class="col-sm-2">
           <p><a class="btn btn-primary btn-lg" id="landing-page-login-button" href="#" role="button">Register</a></p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-sm-2">
           <p><a class="btn btn-primary btn-lg" id="landing-page-reg-button" href="#" role="button">Log In</a></p>
         </div>
       </div>
@@ -82,6 +83,59 @@
             </div>
         </div>
     </div>
+
+    <!-- Log In Form -->
+    <section id="login">
+        <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                  <div class="form-wrap">
+                    <h1>Log in with your email account</h1>
+                        <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="key" class="sr-only">Password</label>
+                                <input type="password" name="key" id="key" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="checkbox">
+                                <span class="character-checkbox" onclick="showPassword()"></span>
+                                <span class="label">Show password</span>
+                            </div>
+                            <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">
+                        </form>
+                        <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
+                        <hr>
+                  </div>
+            </div> <!-- /.col-xs-12 -->
+          </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section>
+
+    <div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">×</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title">Recovery password</h4>
+          </div>
+          <div class="modal-body">
+            <p>Type your email account</p>
+            <input type="email" name="recovery-email" id="recovery-email" class="form-control" autocomplete="off">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-custom">Recovery</button>
+          </div>
+        </div> <!-- /.modal-content -->
+      </div> <!-- /.modal-dialog -->
+    </div> <!-- /.modal -->
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
