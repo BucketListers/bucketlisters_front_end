@@ -70,6 +70,16 @@ body {
   color: #585858;
 }
 
+.form-control {
+  width: 300px;
+}
+
+.modal-body {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
 /*    --------------------------------------------------
   :: Login Form Section
   -------------------------------------------------- */
@@ -142,6 +152,16 @@ body {
 #register .btn.btn-custom {
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+#login-submit-button {
+  background-color: #FF9009;
+  border-color: #FF9009;
+}
+
+#reg-submit-button {
+  background-color: #FF9009;
+  border-color: #FF9009;
 }
 
 /*    --------------------------------------------------
