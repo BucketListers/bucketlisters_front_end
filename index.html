@@ -44,16 +44,16 @@
       <p id="landing-page-subhead">Start planning now for a more fulfilling future!</p>
     <div class="row" id="landing-page-buttons">
         <div class="col-sm-2 col-sm-offset-4">
-          <p><a class="btn btn-primary btn-lg" id="landing-page-login-button" href="#" role="button">Register</a></p>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reg-button">Register</button>
         </div>
         <div class="col-sm-1 ">
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Log In</button>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login-button">Log In</button>
         </div>
     </div>
 
     <!-- Log In Form & Modal -->
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="login-button" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -95,8 +95,53 @@
   </div>
 </div>
 
-    <!-- Registration Form  and Modal -->
+    <!-- Registration Form & Modal-->
 
+<div class="modal fade" id="reg-button" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create a New Account</h4>
+      </div>
+      <div class="modal-body">
+
+          <section id="register">
+            <div id="registration-form">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-wrap">
+                      <h1>Create a new account</h1>
+                        <form role="form" action="javascript:;" method="post" id="reg-form" autocomplete="off">
+                          <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email Address">
+                          </div>
+                          <div class="form-group">
+                            <label for="key" class="sr-only">Password</label>
+                            <input type="password" name="key" id="key" class="form-control" placeholder="Password">
+                          </div>
+                          <div class="form-group">
+                            <label for="key" class="sr-only">Password Confirmation</label>
+                            <input type="password" name="key" id="key" class="form-control" placeholder="Password Confirmation">
+                          </div>
+                            <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Register">
+                        </form>
+                    </div>
+                  </div> <!-- /.col-xs-12 -->
+                </div> <!-- /.row -->
+              </div> <!-- /.container -->
+            </div>
+          </section>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
