@@ -54,11 +54,13 @@ body {
 #landing-page-login-button {
   background-color: #FF9009;
   border-color: #FF9009;
+  width: 100px;
 }
 
 #landing-page-reg-button {
   background-color: #FF9009;
   border-color: #FF9009;
+  width: 100px;
 }
 
 .landing-page-col-text {
