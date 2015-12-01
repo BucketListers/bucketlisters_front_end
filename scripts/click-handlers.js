@@ -14,6 +14,18 @@ $(document).ready(function() {
 
     ////////////Login / Register Helper Fucntions
 
+    var handleError = function handleError(error, data, optional_alert) {
+      if (error) {
+        console.error(error);
+        if(optional_alert){
+          optional_alert();
+        }
+        throw error;
+      } else {
+        console.log(data);
+      }
+    };
+
     var form2object = function(form) {
         var data = {};
         $(form).find('input').each(function(index, element) {
@@ -36,17 +48,20 @@ $(document).ready(function() {
 
     ////Register
 
-    $('#landing-page-login-button').on('submit', function(e) {
-        var credentials = wrap('credentials', form2object(this));
-        bucketList_api.register(credentials, function(err, data) {
+    $('#reg-form').on('submit', function(e) {
+        e.preventDefault();
+        var credentials = form2object(this);
+        console.log(credentials);
+        bucketList_api.signup(credentials, function(err, data) {
             handleError(err, data, function() {
-                alert("Invalid registration");
+                console.log(err);
             });
-            $('#register_form').hide();
-            $('#login_form').css('margin', '0px auto');
+            console.log(data);
+            $('#reg-form').hide();
+            // $('#login_form').css('margin', '0px auto');
 
         });
-        e.preventDefault();
+
     });
 
     // Login

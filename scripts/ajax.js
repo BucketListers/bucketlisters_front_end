@@ -2,8 +2,8 @@
 
 var bucketList_api = {
     //url: 'https://someurl',
-   // url: 'http://localhost:3000',
-    url: 'http://httpbin.org/',
+   url: 'http://localhost:3000',
+    // url: 'http://httpbin.org/',
 
     ajax: function(config, cb) {
         $.ajax(config).done(function(data, textStatus, jqxhr) {
@@ -17,14 +17,16 @@ var bucketList_api = {
         });
     },
 
-    register: function register(credentials, callback) {
+    signup: function register(credentials, callback) {
         this.ajax({
             method: 'POST',
-            url: this.url + '/register',
+            // xhrFields: {
+            //     withCredentials: true
+            // },
+            url: this.url + '/signup',
             contentType: 'application/json',
-            data: JSON.stringify(credentials),
-            dataType: 'json'
-        }, callback);
+            data: JSON.stringify(credentials)
+            }, callback);
     },
 
     login: function login(credentials, callback) {
