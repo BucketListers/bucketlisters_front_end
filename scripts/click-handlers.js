@@ -54,10 +54,9 @@ $(document).ready(function() {
         console.log(credentials);
         bucketList_api.signup(credentials, function(err, data) {
             handleError(err, data, function() {
-                console.log(err);
-            });
-            console.log(data);
-            $('#reg-form').hide();
+                alert("Invalid credentials");
+             });
+            $('.register').hide();
             // $('#login_form').css('margin', '0px auto');
 
         });
@@ -65,31 +64,29 @@ $(document).ready(function() {
     });
 
     // Login
-    $('#login').on('submit', function(e) {
-        var credentials = wrap('credentials', form2object(this));
-        buckList_api.login(credentials, function(err, data) {
+    $('#login-form').on('submit', function(e) {
+        var credentials = form2object(this);
+        bucketList_api.login(credentials, function(err, data) {
             handleError(err, data, function() {
                 alert("Invalid credentials");
             });
-            token = data.user.token;
-            user_id = data.user.id;
             $('.modal-dialog').hide();
-            $('#spacer').removeClass('col-xs-3');
-            $('#logout').show();
-            $("#profile_buttons_display").show();
+            $('#logout-button-text').show();
         });
         e.preventDefault();
     });
 
     // Logout
-    $('#logout').on('click', function(e) {
-        bucketList_api.logout(user_id, token, function(err, data) {
+    $('#logout-button-text').on('click', function(e) {
+        bucketList_api.logout(function(err, data) {
             handleError(err, data);
             console.log("logged out");
-            $('.modal-dialog').show();
-            $('#register_form').show();
-            $("#logout, #profile_buttons_display, #profile_buttons, #profile, #profile_update, #profile_submit").hide();
-            $('#pairs, #pairings-table, #sc-widget, .alarm-button, #weather_display, #genre_display').hide();
+            $('#logout-button-text').hide();
+
+            // $('.modal-dialog').show();
+            // $('#register_form').show();
+            // $("#logout, #profile_buttons_display, #profile_buttons, #profile, #profile_update, #profile_submit").hide();
+            // $('#pairs, #pairings-table, #sc-widget, .alarm-button, #weather_display, #genre_display').hide();
         });
         e.preventDefault();
     });

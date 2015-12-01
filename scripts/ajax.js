@@ -35,18 +35,21 @@ var bucketList_api = {
             url: this.url + '/login',
             contentType: 'application/json',
             data: JSON.stringify(credentials),
-            dataType: 'json'
+            xhrFields: {
+                withCredentials: true
+            }
+            // dataType: 'json'
         }, callback);
     },
-    logout: function logout(id, token, callback) {
+    logout: function logout(callback) {
         this.ajax({
-            method: 'DELETE',
-            url: this.url + '/logout/' + user_id,
-            headers: {
-                Authorization: 'Token token=' + token
-            },
+            method: 'POST',
+            url: this.url + '/logout',
             contentType: 'application/json',
-            dataType: 'json'
+            xhrFields: {
+                withCredentials: true
+            }
+            //dataType: 'json'
         }, callback);
     },
 

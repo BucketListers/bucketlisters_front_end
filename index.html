@@ -32,7 +32,6 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
           <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#" id="login-button-text">Log In<span class="sr-only">(current)</span></a></li>
           <li class="active"><a href="#" id="logout-button-text">Log Out<span class="sr-only">(current)</span></a></li>
           </ul>
       </div><!-- /.container-fluid -->
@@ -71,11 +70,11 @@
                         <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
                           <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="log-email" id="log-email" class="form-control" placeholder="Email Address">
+                            <input type="email" name="username" id="log-email" class="form-control" placeholder="Email Address">
                           </div>
                           <div class="form-group">
                             <label for="key" class="sr-only">Password</label>
-                            <input type="password" name="log-pw" id="log-pw" class="form-control" placeholder="Password">
+                            <input type="password" name="password" id="log-pw" class="form-control" placeholder="Password">
                           </div>
                           <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log In">
                         </form>
@@ -95,7 +94,7 @@
     <!-- Registration Form & Modal-->
 
 <div class="modal fade" id="reg-button" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog register" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
