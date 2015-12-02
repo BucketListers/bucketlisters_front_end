@@ -51,7 +51,7 @@ var bucketList_api = {
 
 
     ///// Profile
-    createListItem: function createProfile(createlistItem, callback) {
+    createListItem: function createListItem(listItem, callback) {
         this.ajax({
             method: 'POST',
             url: this.url + '/items',
