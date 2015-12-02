@@ -33,25 +33,30 @@ body {
   background-image: url(./images/mt-rushmore-web.jpg);
   background-repeat: no-repeat;
   margin-top: -20px;
-  min-height: 450px;
-  max-height: 450px;
-  px;
+  min-height: 400px;
+  max-height: 500px;
   background-size: 100%;
   background-color: #cccccc;
-
 }
 
+@media only screen and (max-width: 400px) {
+   .jumbotron {
+      background-image: url(./images/mt-rushmore-web-sm.jpg);
+    }
+}
 
 #landing-page-headline {
   font-family: 'Lato', sans-serif;
+  text-shadow: 0 0 3px #585858;
   font-size: 64px;
   font-weight: bold;
-  color: #118C4E;
+  color: white;
 }
 
 #landing-page-subhead {
   font-size: 28px;
-  color: #585858;
+  text-shadow: 0 0 3px #585858;
+  color: white;
 }
 
 #landing-page-buttons {
