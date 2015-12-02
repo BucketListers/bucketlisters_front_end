@@ -31,7 +31,6 @@ body {
 .jumbotron {
   text-align: center;
   margin-top: -20px;
-  background-image: url("paper.gif");
   background-color: #cccccc;
 }
 
@@ -175,4 +174,10 @@ body {
 .btn-custom:hover,
 .btn-custom:focus {
   color: #fff;
+}
+
+
+#show-activity-list {
+  background-color: #FF9009;
+  border-color: #FF9009;
 }
