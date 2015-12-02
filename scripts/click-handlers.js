@@ -49,7 +49,6 @@ $(document).ready(function() {
     ////Register
 
     $('#reg-form').on('submit', function(e) {
-        alert("click handler");
         e.preventDefault();
         var credentials = form2object(this);
         console.log(credentials);
@@ -57,7 +56,9 @@ $(document).ready(function() {
             handleError(err, data, function() {
                 alert("Invalid credentials");
              });
-            $('.register').hide();
+            // $('.register').hide();
+            $('#reg-popup').modal('hide');
+            $('.modal-backdrop').remove();
             // $('#login_form').css('margin', '0px auto');
 
         });
@@ -66,13 +67,13 @@ $(document).ready(function() {
 
     // Login
     $('#login-form').on('submit', function(e) {
-        alert("click handler");
         var credentials = form2object(this);
         bucketList_api.login(credentials, function(err, data) {
             handleError(err, data, function() {
                 alert("Invalid credentials");
             });
-            $('.modal-dialog').hide();
+            $('#login-popup').modal('hide');
+            $('.modal-backdrop').remove();
             $('#logout-button-text').show();
         });
         e.preventDefault();

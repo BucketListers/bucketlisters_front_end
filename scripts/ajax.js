@@ -50,7 +50,20 @@ var bucketList_api = {
     },
 
 
-    ///// Profile
+    ///// List and List Items
+
+    showList: function showList(callback) {
+        this.ajax({
+            method: 'GET',
+            url: this.url + '/items',
+            dataType: 'json',
+            xhrFields: {
+                withCredentials: true
+            }
+
+        }, callback);
+    },
+
     createListItem: function createListItem(listItem, callback) {
         this.ajax({
             method: 'POST',
@@ -75,22 +88,10 @@ var bucketList_api = {
         }, callback);
     },
 
-    showList: function showList(callback) {
-        this.ajax({
-            method: 'GET',
-            url: this.url + '/items',
-            dataType: 'json',
-            xhrFields: {
-                withCredentials: true
-            }
-
-        }, callback);
-    },
-
-    destroyListItem: function destroyListItem(callback) {
+    destroyListItem: function destroyListItem(item_id, callback) {
         this.ajax({
             method: 'DELETE',
-            url: this.url + '/users/' + '/items',
+            url: this.url + '/items' + item_id,
             dataType: 'json',
             xhrFields: {
                 withCredentials: true
