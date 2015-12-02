@@ -85,14 +85,16 @@ $(document).ready(function() {
             handleError(err, data);
             console.log("logged out");
             $('#logout-button-text').hide();
-
-            // $('.modal-dialog').show();
-            // $('#register_form').show();
-            // $("#logout, #profile_buttons_display, #profile_buttons, #profile, #profile_update, #profile_submit").hide();
-            // $('#pairs, #pairings-table, #sc-widget, .alarm-button, #weather_display, #genre_display').hide();
         });
         e.preventDefault();
     });
-
+    $('#show-activity-list').on('click', function(e){
+        bucketList_api.showList(function(err, data){
+            handleError(err,data);
+            data.list.forEach(function(id){
+              $('#activity-table tr:last').after('<tr><td>' + id +  '</td><td>' + id + '</td></tr>');
+            });
+        });
+    });
 
 });
