@@ -15,15 +15,15 @@ $(document).ready(function() {
     ////////////Login / Register Helper Fucntions
 
     var handleError = function handleError(error, data, optional_alert) {
-      if (error) {
-        console.error(error);
-        if(optional_alert){
-          optional_alert();
+        if (error) {
+            console.error(error);
+            if (optional_alert) {
+                optional_alert();
+            }
+            throw error;
+        } else {
+            console.log(data);
         }
-        throw error;
-      } else {
-        console.log(data);
-      }
     };
 
     var form2object = function(form) {
@@ -59,6 +59,8 @@ $(document).ready(function() {
             // $('.register').hide();
             $('#reg-popup').modal('hide');
             $('.modal-backdrop').remove();
+            });
+            $('.register').hide();
             // $('#login_form').css('margin', '0px auto');
 
         });
@@ -96,6 +98,5 @@ $(document).ready(function() {
               $('#activity-table tr:last').after('<tr data=' + id + '><td>' + id +  '</td><td>' + id + '</td></tr>');
             });
         });
-    });
 
 });
