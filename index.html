@@ -52,7 +52,7 @@
 
     <!-- Log In Form & Modal -->
 
-    <div class="modal fade" id="login-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal" id="login-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -178,12 +178,20 @@
       <tr>
         <th>Activity Name</th>
         <th>City</th>
+        <th></th>
+        <th></th>
       </tr>
       <tr>
-        <td>Duck Boats</td>
-        <td>Boston</td>
+        <td></td>
+        <td></td>
+        <td><button class="edit-button">Edit</button></td>
+        <td><button class="edit-button">Delete</button></td>
       </tr>
     </table>
+
+
+    <!-- Add New Activity Button -->
+    <button type="button" class="btn btn-primary" id="add-new-activity">Add a New Activity</button>
 
 
     <!-- Create New Activity -->
@@ -219,6 +227,8 @@
         </div>
       </div>
     </form>
+
+
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
