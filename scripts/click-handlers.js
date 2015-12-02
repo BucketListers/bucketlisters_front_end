@@ -89,10 +89,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
     $('#show-activity-list').on('click', function(e){
+        e.preventDefault();
         bucketList_api.showList(function(err, data){
             handleError(err,data);
-            data.list.forEach(function(id){
-              $('#activity-table tr:last').after('<tr><td>' + id +  '</td><td>' + id + '</td></tr>');
+            data.title.forEach(function(id){
+              $('#activity-table tr:last').after('<tr data=' + id + '><td>' + id +  '</td><td>' + id + '</td></tr>');
             });
         });
     });

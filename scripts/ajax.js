@@ -59,8 +59,8 @@ var bucketList_api = {
             dataType: 'json',
             xhrFields: {
                 withCredentials: true
-            }
-
+            },
+            dataType: 'json'
         }, callback);
     },
 
