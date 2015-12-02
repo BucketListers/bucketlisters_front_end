@@ -30,9 +30,17 @@ body {
 
 .jumbotron {
   text-align: center;
+  background-image: url(./images/mt-rushmore-web.jpg);
+  background-repeat: no-repeat;
   margin-top: -20px;
+  min-height: 450px;
+  max-height: 450px;
+  px;
+  background-size: 100%;
   background-color: #cccccc;
+
 }
+
 
 #landing-page-headline {
   font-family: 'Lato', sans-serif;
