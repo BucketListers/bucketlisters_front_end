@@ -65,7 +65,6 @@ $(document).ready(function() {
 
         });
 
-    });
 
     // Login
     $('#login-form').on('submit', function(e) {
@@ -90,6 +89,8 @@ $(document).ready(function() {
         });
         e.preventDefault();
     });
+
+    // showList
     $('#show-activity-list').on('click', function(e){
         e.preventDefault();
         bucketList_api.showList(function(err, data){
@@ -97,6 +98,18 @@ $(document).ready(function() {
             data.forEach(function(item){
               $('#activity-table tr:last').after('<tr id=' + item._id + '><td>' + item.name +  '</td><td>' + item.city + '</td></tr>');
             });
+            $('#show-activity-list').hide();
         });
+    });
+
+    // CreateListItem
+     $('#create-activity').on('submit', function(e) {
+        e.preventDefault();
+        var credentials = form2object(this);
+        bucketList_api.createListItem(credentials, function(err, data){
+          handleError(err,data);
+          $('#activity-table tr:last').after('<tr id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td></tr>')
+        });
+    });
 
 });
