@@ -96,7 +96,8 @@ $(document).ready(function() {
         bucketList_api.showList(function(err, data){
             handleError(err,data);
             data.forEach(function(item){
-              $('#activity-table tr:last').after('<tr id=' + item._id + '><td>' + item.name +  '</td><td>' + item.city + '</td></tr>');
+              $('#activity-table tr:last').after(
+                '<tr data-id=' + item._id + '><td>' + item.name +  '</td><td>' + item.city + '</td><td><button class="edit btn btn-primary">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
             });
             $('#show-activity-list').hide();
         });
@@ -108,8 +109,25 @@ $(document).ready(function() {
         var credentials = form2object(this);
         bucketList_api.createListItem(credentials, function(err, data){
           handleError(err,data);
-          $('#activity-table tr:last').after('<tr id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td></tr>')
+          $('#activity-table tr:last').after(
+            '<tr data-id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td><td><button class="edit btn btn-primary">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
         });
     });
+    $('#activity-table').on('click', function(event){
+        event.preventDefault();
+        console.log("button on table");
+        var $target = $(event.target);
+        if($target.hasClass("delete")){
+            console.log("deleting ", $target);
+            $target.parent().parent().remove();
+
+           // bucketList_api.destroyListItem();
+        }else if($target.hasClass("edit")){
+            // otherasutff
+            console.log("editting ", $target)
+
+        }
+    });
+
 
 });
