@@ -94,8 +94,8 @@ $(document).ready(function() {
         e.preventDefault();
         bucketList_api.showList(function(err, data){
             handleError(err,data);
-            data.title.forEach(function(id){
-              $('#activity-table tr:last').after('<tr data=' + id + '><td>' + id +  '</td><td>' + id + '</td></tr>');
+            data.forEach(function(item){
+              $('#activity-table tr:last').after('<tr id=' + item._id + '><td>' + item.name +  '</td><td>' + item.city + '</td></tr>');
             });
         });
 
