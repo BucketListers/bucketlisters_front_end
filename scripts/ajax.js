@@ -77,17 +77,30 @@ var bucketList_api = {
         }, callback);
     },
 
-    updateListItem: function updateListItem(item_id, callback) {
+    updateListItem: function updateListItem(item_id, listItem, callback) {
         this.ajax({
             method: 'PATCH',
             contentType: 'application/json',
             url: this.url + '/items/' + item_id,
+            data: JSON.stringify(listItem),
             dataType: 'json',
             xhrFields: {
                 withCredentials: true
             }
         }, callback);
     },
+
+    // destroyReference: function updateListItem(user_id, item_id, callback) {
+    //     this.ajax({
+    //         method: 'PATCH',
+    //         contentType: 'application/json',
+    //         url: this.url + '/users/' + user_id,
+    //         dataType: 'json',
+    //         xhrFields: {
+    //             withCredentials: true
+    //         }
+    //     }, callback);
+    // },
 
     destroyListItem: function destroyListItem(item_id, callback) {
         this.ajax({
@@ -99,7 +112,7 @@ var bucketList_api = {
             }
 
         }, callback);
-    },
+    }
 
 
 };
