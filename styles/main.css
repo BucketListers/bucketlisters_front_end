@@ -10,6 +10,7 @@ body {
 
 .nav-background {
   background-color: #118C4E;
+  border-color: #118C4E;
 }
 
 #login-button-text {
@@ -30,19 +31,12 @@ body {
 
 .jumbotron {
   text-align: center;
-  background-image: url(./images/mt-rushmore-web.jpg);
+  height: 350px;
+  background-image: url(./images/photographer-1440.jpg);
+  background-size: 100% auto;
   background-repeat: no-repeat;
   margin-top: -20px;
-  min-height: 400px;
-  max-height: 500px;
-  background-size: 100%;
   background-color: #cccccc;
-}
-
-@media only screen and (max-width: 400px) {
-   .jumbotron {
-      background-image: url(./images/mt-rushmore-web-sm.jpg);
-    }
 }
 
 #landing-page-headline {
@@ -57,6 +51,43 @@ body {
   font-size: 28px;
   text-shadow: 0 0 3px #585858;
   color: white;
+}
+
+
+@media only screen and (max-width: 1000px) {
+   .jumbotron {
+      background-image: url(./images/photographer-1000.jpg);
+    }
+    #landing-page-headline {
+      font-size: 42px;
+    }
+    #landing-page-subhead {
+      font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+   .jumbotron {
+      background-image: url(./images/photographer-700.jpg);
+    }
+    #landing-page-headline {
+      font-size: 28px;
+    }
+    #landing-page-subhead {
+      font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+   .jumbotron {
+      background-image: url(./images/photographer-500.jpg);
+    }
+    #landing-page-headline {
+      font-size: 24px;
+    }
+    #landing-page-subhead {
+      font-size: 16px;
+    }
 }
 
 #landing-page-buttons {
