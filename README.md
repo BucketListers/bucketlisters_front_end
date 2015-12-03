@@ -1,12 +1,29 @@
 
-# !Bucket list Builder
-
+# Bucketlist Builder
 
 This is a full stack application called Bucketlist Builder. It is designed in a way so that you can pick a city and a location and add it to your bucket list.
 
 The Bucketlist Builder allows users to Create, Read, Update, and Delete locations and activities.
 
+# General Approach
 
+## Link to backend repo
+
+## Link to deployed app
+
+## Link to Heroku
+
+## Technologies Used
+
+- Express.js
+- Node.js
+- Bootstrap
+- Javascript
+- jQuery
+- HTML/CSS
+- Mongo DB
+- Mongoose
+- Passport
 
 ## User Stories:
 
@@ -31,7 +48,6 @@ edit an activity
 delete and activity
 log off account
 
-
 **Stretch goals**
 
 integrate a map feature
@@ -39,8 +55,6 @@ create an inspiration page with ideas/links
 add more detail to activities
 add category images to list items
 create a social component for users to share ideas
-
-
 
 ## Stories
 
@@ -54,7 +68,6 @@ create a social component for users to share ideas
 * I can see saved activity list.
 * I can log out.
 
-
 **Navigation flow**
 
 Register (user creation)
@@ -63,12 +76,13 @@ Register (user creation)
 3. Activity Creation
 4. Save List
 
-
 **Wire Frames**
 
+1. Landing Page (https://wireframe.cc/x1V2n3)
+2. Login/Register (https://wireframe.cc/GWIJyh)
+3. Logged-in Landing Page (https://wireframe.cc/7a8UoD)
+4. Add Activity (https://wireframe.cc/hBxnES)
+5. Activity List (https://wireframe.cc/8fqWWi)
 
-**Landing Page (https://wireframe.cc/x1V2n3)
-**Login/Register (https://wireframe.cc/GWIJyh)
-**Logged-in Landing Page (https://wireframe.cc/7a8UoD)
-**Add Activity (https://wireframe.cc/hBxnES)
-**Activity List (https://wireframe.cc/8fqWWi)
+**Unsolved Problems**
+
