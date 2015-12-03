@@ -95,6 +95,7 @@ var bucketList_api = {
     //         method: 'PATCH',
     //         contentType: 'application/json',
     //         url: this.url + '/users/' + user_id,
+    //         data: JSON.stringify(item_id),
     //         dataType: 'json',
     //         xhrFields: {
     //             withCredentials: true

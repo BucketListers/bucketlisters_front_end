@@ -144,7 +144,6 @@ $(document).ready(function() {
             console.log("deleting ", id);
             $target.parent().parent().remove();
 
-            // bucketList_api.destroyReference(user_id, item_id, function(err, data){});
             bucketList_api.destroyListItem(id, function(err, data){});
         }else if($target.hasClass("edit")){
             console.log("editing ", id);
