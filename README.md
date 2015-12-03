@@ -1,5 +1,5 @@
 
-# ![] Bucket list Builder
+# !Bucket list Builder
 
 
 This is a full stack application called Bucketlist Builder. It is designed in a way so that you can pick a city and a location and add it to your bucket list.
@@ -59,6 +59,16 @@ create a social component for users to share ideas
 
 Register (user creation)
 1. Login (auth)
-1. City Location
-1. Activity Creation
-1. Save List
+2. City Location
+3. Activity Creation
+4. Save List
+
+
+**Wire Frames**
+
+
+**Landing Page (https://wireframe.cc/x1V2n3)
+**Login/Register (https://wireframe.cc/GWIJyh)
+**Logged-in Landing Page (https://wireframe.cc/7a8UoD)
+**Add Activity (https://wireframe.cc/hBxnES)
+**Activity List (https://wireframe.cc/8fqWWi)
