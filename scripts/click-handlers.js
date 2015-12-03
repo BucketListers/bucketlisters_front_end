@@ -107,6 +107,7 @@ $(document).ready(function() {
      $('#create-activity').on('submit', function(e) {
         e.preventDefault();
         var credentials = form2object(this);
+        $('input:text').val('');
         bucketList_api.createListItem(credentials, function(err, data){
           handleError(err,data);
           $('#activity-table tr:last').after(
@@ -115,17 +116,20 @@ $(document).ready(function() {
     });
     $('#activity-table').on('click', function(event){
         event.preventDefault();
-        console.log("button on table");
         var $target = $(event.target);
-        var id = $target.parent().parent().data('id');
+        id = $target.parent().parent().data('id');
         if($target.hasClass("delete")){
             console.log("deleting ", id);
             $target.parent().parent().remove();
 
-            bucketList_api.destroyReference(user_id, item_id, function(err, data){});
+            // bucketList_api.destroyReference(user_id, item_id, function(err, data){});
             bucketList_api.destroyListItem(id, function(err, data){});
         }else if($target.hasClass("edit")){
+            console.log("editing ", id);
 
+            $('#update-name').val($target.parent().prev().prev().text());
+            $('#update-city').val($target.parent().prev().text())
+            $target.parent().parent().remove();
 
             // // otherasutff
             // console.log("editting ", id);
@@ -136,9 +140,22 @@ $(document).ready(function() {
             // // $('#activity-table tr:last').after('<tr data-id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td><td><button class="edit btn btn-primary">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>'
             // // );
 
-            // bucketList_api.editListItem(id, function(err, data){});
+            // bucketList_api.updateListItem(id, function(err, data){});
         }
     });
-
+    // UpdateListItem
+     $('#update-activity').on('submit', function(e) {
+        e.preventDefault();
+        var credentials = form2object(this);
+        $('input:text').val('');
+        console.log(credentials);
+        console.log(id);
+        bucketList_api.updateListItem(id, credentials, function(err, data){
+          handleError(err,data);
+          console.log('inside update AJAX');
+          $('#activity-table tr:last').after(
+            '<tr data-id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td><td><button class="edit btn btn-primary">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
+        });
+    });
 
 });
