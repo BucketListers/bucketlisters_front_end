@@ -9,45 +9,98 @@ body {
 }
 
 .nav-background {
-  background-color: #118C4E;
+  background-color: #585858;
+  border-color: #585858;
 }
 
-#nav-login-button {
+#login-button-text {
+  display: inline-block;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   color: white;
+  background-color: #585858;
+}
+
+#logout-button-text {
+  display: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: #585858;
+}
+
+.jumbotron {
+  text-align: center;
+  height: 350px;
+  background-image: url(./images/climber2-1440.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  background-color: #cccccc;
 }
 
 #landing-page-headline {
-  font-family: 'Lato', sans-serif;
   font-size: 64px;
-  font-weight: bold;
-  color: #118C4E;
+  color: white;
 }
 
 #landing-page-subhead {
   font-size: 28px;
-  color: #585858;
+  text-shadow: 0 0 1px white;
+  color: white;
+}
+
+
+@media only screen and (max-width: 1000px) {
+   .jumbotron {
+      background-image: url(./images/climber2-1000.jpg);
+    }
+    #landing-page-headline {
+      font-size: 42px;
+    }
+    #landing-page-subhead {
+      font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+   .jumbotron {
+      background-image: url(./images/climber2-700.jpg);
+    }
+    #landing-page-headline {
+      font-size: 28px;
+    }
+    #landing-page-subhead {
+      font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+   .jumbotron {
+      background-image: url(./images/climber2-500.jpg);
+    }
+    #landing-page-headline {
+      font-size: 24px;
+    }
+    #landing-page-subhead {
+      font-size: 16px;
+    }
+}
+
+#landing-page-buttons {
+  margin: 0 auto;
 }
 
 #landing-page-login-button {
   background-color: #FF9009;
   border-color: #FF9009;
-
+  width: 100px;
 }
 
 #landing-page-reg-button {
   background-color: #FF9009;
   border-color: #FF9009;
-}
-
-.jumbotron {
-  text-align: center;
-  margin-top: -20px;
-}
-
-.btn btn-primary btn-lg {
-  font-family: 'Lato', sans-serif;
+  width: 100px;
 }
 
 .landing-page-col-text {
@@ -55,4 +108,146 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 24px;
   color: #585858;
+}
+
+.form-control {
+  width: 300px;
+}
+
+/*    --------------------------------------------------
+  :: Login Form Section
+  -------------------------------------------------- */
+#log-in-form {
+  display: inline;
+}
+
+#login {
+  padding-top: 50px;
+}
+#login .form-wrap {
+  width: 30%;
+  margin: 0 auto;
+}
+#login h1 {
+  color: #118C4E;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+#login .form-group {
+  margin-bottom: 25px;
+}
+#login .btn.btn-custom {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/*    --------------------------------------------------
+  :: Login Form Inputs & Buttons
+  -------------------------------------------------- */
+.form-control {
+  color: #212121;
+}
+.btn-custom {
+  color: #fff;
+  background-color: #FF9009;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+  color: #fff;
+}
+
+/*    --------------------------------------------------
+  :: Registration Form Section
+  -------------------------------------------------- */
+#registration-form {
+  display: inline;
+}
+
+#register {
+  padding-top: 50px;
+}
+#register .form-wrap {
+  width: 30%;
+  margin: 0 auto;
+}
+#register h1 {
+  color: #118C4E;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+#register .form-group {
+  margin-bottom: 25px;
+}
+#register .btn.btn-custom {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#login-submit-button {
+  background-color: #FF9009;
+  border-color: #FF9009;
+}
+
+#reg-submit-button {
+  background-color: #FF9009;
+  border-color: #FF9009;
+}
+
+#registration-complete {
+  display: none;
+  text-align: center;
+}
+
+.modal-title {
+  color: #118C4E;
+  font-size: 26px;
+}
+
+/*    --------------------------------------------------
+  :: Registration Form Inputs & Buttons
+  -------------------------------------------------- */
+.form-control {
+  color: #212121;
+}
+.btn-custom {
+  color: #fff;
+  background-color: #FF9009;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+  color: #fff;
+}
+
+#mkt-icons {
+  display: none;
+}
+
+#show-activity-list {
+  display: none;
+  background-color: #FF9009;
+  border-color: #FF9009;
+  width: 185px;
+}
+
+#activity-table {
+  display: none;
+}
+
+#activity-table-header {
+  display: none;
+}
+
+#add-new-activity {
+  display: none;
+  background-color: #FF9009;
+  border-color: #FF9009;
+  width: 185px;
+}
+
+#update-activity {
+  display: none;
 }
