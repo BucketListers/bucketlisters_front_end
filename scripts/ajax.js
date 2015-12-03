@@ -21,6 +21,9 @@ var bucketList_api = {
             method: 'POST',
             url: this.url + '/signup',
             contentType: 'application/json',
+            xhrFields: {
+                withCredentials: true
+            },
             data: JSON.stringify(credentials)
         }, callback);
     },
