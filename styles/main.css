@@ -32,7 +32,7 @@ body {
 .jumbotron {
   text-align: center;
   height: 350px;
-  background-image: url(./images/photographer-1440.jpg);
+  background-image: url(./images/climber2-1440.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   margin-top: -20px;
@@ -40,22 +40,20 @@ body {
 }
 
 #landing-page-headline {
-  font-family: 'Lato', sans-serif;
-  text-shadow: 0 0 1px black;
   font-size: 64px;
   color: white;
 }
 
 #landing-page-subhead {
   font-size: 28px;
-  text-shadow: 0 0 3px #585858;
+  text-shadow: 0 0 1px white;
   color: white;
 }
 
 
 @media only screen and (max-width: 1000px) {
    .jumbotron {
-      background-image: url(./images/photographer-1000.jpg);
+      background-image: url(./images/climber2-1000.jpg);
     }
     #landing-page-headline {
       font-size: 42px;
@@ -67,7 +65,7 @@ body {
 
 @media only screen and (max-width: 700px) {
    .jumbotron {
-      background-image: url(./images/photographer-700.jpg);
+      background-image: url(./images/climber2-700.jpg);
     }
     #landing-page-headline {
       font-size: 28px;
@@ -79,7 +77,7 @@ body {
 
 @media only screen and (max-width: 500px) {
    .jumbotron {
-      background-image: url(./images/photographer-500.jpg);
+      background-image: url(./images/climber2-500.jpg);
     }
     #landing-page-headline {
       font-size: 24px;
@@ -94,14 +92,14 @@ body {
 }
 
 #landing-page-login-button {
-  background-color: #7A8370;
-  border-color: #7A8370;
+  background-color: #FF9009;
+  border-color: #FF9009;
   width: 100px;
 }
 
 #landing-page-reg-button {
-  background-color: #7A8370;
-  border-color: #7A8370;
+  background-color: #FF9009;
+  border-color: #FF9009;
   width: 100px;
 }
 
