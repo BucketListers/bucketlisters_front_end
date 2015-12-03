@@ -80,6 +80,7 @@ var bucketList_api = {
     updateListItem: function updateListItem(item_id, callback) {
         this.ajax({
             method: 'PATCH',
+            contentType: 'application/json',
             url: this.url + '/items/' + item_id,
             dataType: 'json',
             xhrFields: {
@@ -91,7 +92,7 @@ var bucketList_api = {
     destroyListItem: function destroyListItem(item_id, callback) {
         this.ajax({
             method: 'DELETE',
-            url: this.url + '/items' + item_id,
+            url: this.url + '/items/' + item_id,
             dataType: 'json',
             xhrFields: {
                 withCredentials: true

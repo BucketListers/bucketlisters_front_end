@@ -117,15 +117,25 @@ $(document).ready(function() {
         event.preventDefault();
         console.log("button on table");
         var $target = $(event.target);
+        var id = $target.parent().parent().data('id');
         if($target.hasClass("delete")){
-            console.log("deleting ", $target);
+            console.log("deleting ", id);
             $target.parent().parent().remove();
 
-           // bucketList_api.destroyListItem();
+           bucketList_api.destroyListItem(id, function(err, data){});
         }else if($target.hasClass("edit")){
-            // otherasutff
-            console.log("editting ", $target)
 
+
+            // // otherasutff
+            // console.log("editting ", id);
+            // //display new form GET TO THIS LATER
+            // //populate new form from row
+
+            // $target.parent().parent().remove();
+            // // $('#activity-table tr:last').after('<tr data-id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td><td><button class="edit btn btn-primary">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>'
+            // // );
+
+            // bucketList_api.editListItem(id, function(err, data){});
         }
     });
 
