@@ -197,6 +197,11 @@ body {
   border-color: #FF9009;
 }
 
+#registration-complete {
+  display: none;
+  text-align: center;
+}
+
 .modal-title {
   color: #118C4E;
   font-size: 26px;
@@ -217,8 +222,32 @@ body {
   color: #fff;
 }
 
+#mkt-icons {
+  display: none;
+}
 
 #show-activity-list {
+  display: none;
   background-color: #FF9009;
   border-color: #FF9009;
+  width: 185px;
+}
+
+#activity-table {
+  display: none;
+}
+
+#activity-table-header {
+  display: none;
+}
+
+#add-new-activity {
+  display: none;
+  background-color: #FF9009;
+  border-color: #FF9009;
+  width: 185px;
+}
+
+#update-activity {
+  display: none;
 }

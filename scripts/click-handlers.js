@@ -49,7 +49,6 @@ $(document).ready(function() {
     ////Register
 
     $('#reg-form').on('submit', function(e) {
-        e.preventDefault();
         var credentials = form2object(this);
         console.log(credentials);
         bucketList_api.signup(credentials, function(err, data) {
@@ -59,9 +58,18 @@ $(document).ready(function() {
             // $('.register').hide();
             $('#reg-popup').modal('hide');
             $('.modal-backdrop').remove();
-            });
-            $('.register').hide();
+            $('#landing-page-reg-button').hide();
+            $('#registration-complete').show();
+            // $('#logout-button-text').show();
+            // $('.jumbotron').hide();
+            // $('#activity-table-header').show();
+            // $('#show-activity-list').show();
+            // $('#activity-table').show();
+            // $('#add-new-activity').show();
+            // $('#update-activity').show();
+           });
             // $('#login_form').css('margin', '0px auto');
+        e.preventDefault();
 
         });
 
@@ -76,6 +84,12 @@ $(document).ready(function() {
             $('#login-popup').modal('hide');
             $('.modal-backdrop').remove();
             $('#logout-button-text').show();
+            $('.jumbotron').hide();
+            $('#activity-table-header').show();
+            $('#show-activity-list').show();
+            $('#activity-table').show();
+            $('#add-new-activity').show();
+            $('#update-activity').show();
         });
         e.preventDefault();
     });
@@ -86,6 +100,12 @@ $(document).ready(function() {
             handleError(err, data);
             console.log("logged out");
             $('#logout-button-text').hide();
+            $('.jumbotron').show();
+            $('#activity-table-header').hide();
+            $('#show-activity-list').hide();
+            $('#activity-table').hide();
+            $('#add-new-activity').hide();
+            $('#update-activity').hide();
         });
         e.preventDefault();
     });
@@ -108,6 +128,8 @@ $(document).ready(function() {
         e.preventDefault();
         var credentials = form2object(this);
         $('input:text').val('');
+        $('#add-new-activity-popup').hide();
+        $('.modal-backdrop').remove();
         bucketList_api.createListItem(credentials, function(err, data){
           handleError(err,data);
           $('#activity-table tr:last').after(
