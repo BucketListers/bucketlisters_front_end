@@ -7,11 +7,11 @@ The Bucketlist Builder allows users to Create, Read, Update, and Delete location
 
 # General Approach
 
+Starting with the backend Dan was in charge of setting it up the routes, controllers, models, and setting up the database. Pablo was in charge of setting up Ajax and click handlers with the help from Dan. Christine was in charge of the frontend in setting up the html and css making the website look attractive and inspiring for users to create a bucket list.
+
 ## Link to backend repo
 
 ## Link to deployed app
-
-## Link to Heroku
 
 ## Technologies Used
 
@@ -86,3 +86,5 @@ Register (user creation)
 
 **Unsolved Problems**
 
+**ERD**
+bucketlisters_front_end/styles/images/WDI-Project3-Bucketlisters-ERD.png
