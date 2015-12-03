@@ -1,9 +1,8 @@
 'use strict';
 
 var bucketList_api = {
-    //url: 'https://someurl',
-    url: 'http://localhost:3000',
-    // url: 'http://httpbin.org/',
+    // url: 'http://localhost:3000',
+    url: 'http://ancient-scrubland-6716.herokuapp.com',
 
     ajax: function(config, cb) {
         $.ajax(config).done(function(data, textStatus, jqxhr) {
@@ -22,6 +21,9 @@ var bucketList_api = {
             method: 'POST',
             url: this.url + '/signup',
             contentType: 'application/json',
+            xhrFields: {
+                withCredentials: true
+            },
             data: JSON.stringify(credentials)
         }, callback);
     },
