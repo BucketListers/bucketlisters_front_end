@@ -10,10 +10,11 @@ The Bucketlist Builder allows users to Create, Read, Update, and Delete location
 Starting with the backend Dan was in charge of setting it up the routes, controllers, models, and setting up the database. Pablo was in charge of setting up Ajax and click handlers with the help from Dan. Christine was in charge of the frontend in setting up the html and css making the website look attractive and inspiring for users to create a bucket list.
 
 ## Link to backend repo
-(http://ancient-scrubland-6716.herokuapp.com)
+- https://github.com/BucketListers/back_end
+- http://ancient-scrubland-6716.herokuapp.com
 
 ## Link to deployed app
-(http://bucketlisters.github.io/bucketlisters_front_end)
+- http://bucketlisters.github.io/bucketlisters_front_end
 
 ## Technologies Used
 
@@ -72,8 +73,8 @@ A person who wants to organize a list of activities they want to do.
 
 **Navigation flow**
 
-Register (user creation)
-1. Login (auth)
+*Register- user creation*
+1. Login authentication
 2. City Location
 3. Activity Creation
 4. Save List
@@ -87,7 +88,8 @@ Register (user creation)
 5. Activity List (https://wireframe.cc/8fqWWi)
 
 **Unsolved Problems**
-
+1. Integrating third party api's.
+2. Add additional form fields the activity list.
 
 
 **ERD**
