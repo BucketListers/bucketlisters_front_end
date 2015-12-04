@@ -10,8 +10,11 @@ The Bucketlist Builder allows users to Create, Read, Update, and Delete location
 Starting with the backend Dan was in charge of setting it up the routes, controllers, models, and setting up the database. Pablo was in charge of setting up Ajax and click handlers with the help from Dan. Christine was in charge of the frontend in setting up the html and css making the website look attractive and inspiring for users to create a bucket list.
 
 ## Link to backend repo
+- https://github.com/BucketListers/back_end
+- http://ancient-scrubland-6716.herokuapp.com
 
 ## Link to deployed app
+- http://bucketlisters.github.io/bucketlisters_front_end
 
 ## Technologies Used
 
@@ -39,22 +42,22 @@ A person who wants to organize a list of activities they want to do.
 
 **Minimum goals**
 
-create a user account
-returning user log into account
-create an activity list
-populate the activity list with goals and locations
-view full saved list
-edit an activity
-delete and activity
-log off account
+* Create a user account.
+* Returning user log into account.
+* Create an activity list.
+* Populate the activity list with goals and locations.
+* View full saved list.
+* Edit an activity.
+* Delete and activity.
+* Log off account.
 
 **Stretch goals**
 
-integrate a map feature
-create an inspiration page with ideas/links
-add more detail to activities
-add category images to list items
-create a social component for users to share ideas
+* Integrate a map feature.
+* Create an inspiration page with ideas/links.
+* Add more detail to activities.
+* Add category images to list items.
+* Create a social component for users to share ideas.
 
 ## Stories
 
@@ -70,8 +73,9 @@ create a social component for users to share ideas
 
 **Navigation flow**
 
-Register (user creation)
-1. Login (auth)
+Register user creation
+
+1. Login authentication
 2. City Location
 3. Activity Creation
 4. Save List
@@ -85,6 +89,10 @@ Register (user creation)
 5. Activity List (https://wireframe.cc/8fqWWi)
 
 **Unsolved Problems**
+1. Integrating third party api's.
+2. Add additional form fields the activity list.
+
 
 **ERD**
+
 bucketlisters_front_end/styles/images/WDI-Project3-Bucketlisters-ERD.png
