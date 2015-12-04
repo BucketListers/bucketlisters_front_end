@@ -9,30 +9,26 @@ body {
 }
 
 .nav-background {
-  background-color: #585858;
-  border-color: #585858;
+  border-radius: 0px;
 }
 
-#login-button-text {
-  display: inline-block;
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
-  color: white;
+.nav-background {
   background-color: #585858;
+  border-color: #585858;
 }
 
 #logout-button-text {
   display: none;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
-  color: white;
+  color: #FF9009;
   background-color: #585858;
 }
 
 .jumbotron {
   text-align: center;
-  height: 350px;
-  background-image: url(./images/climber2-1440.jpg);
+  height: 700px;
+  background-image: url(./images/climber3-1440.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   margin-top: -20px;
@@ -46,14 +42,14 @@ body {
 
 #landing-page-subhead {
   font-size: 28px;
-  text-shadow: 0 0 1px white;
   color: white;
 }
 
 
 @media only screen and (max-width: 1000px) {
    .jumbotron {
-      background-image: url(./images/climber2-1000.jpg);
+      background-image: url(./images/climber3-1000.jpg);
+      height: 600px;
     }
     #landing-page-headline {
       font-size: 42px;
@@ -65,7 +61,8 @@ body {
 
 @media only screen and (max-width: 700px) {
    .jumbotron {
-      background-image: url(./images/climber2-700.jpg);
+      background-image: url(./images/climber3-700.jpg);
+      height: 500px;
     }
     #landing-page-headline {
       font-size: 28px;
@@ -77,7 +74,8 @@ body {
 
 @media only screen and (max-width: 500px) {
    .jumbotron {
-      background-image: url(./images/climber2-500.jpg);
+      background-image: url(./images/climber3-500.jpg);
+      height: 400px;
     }
     #landing-page-headline {
       font-size: 24px;
@@ -192,6 +190,12 @@ body {
   border-color: #FF9009;
 }
 
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .4s linear;
+    transition: opacity .4s linear;
+}
+
 #reg-submit-button {
   background-color: #FF9009;
   border-color: #FF9009;
@@ -205,6 +209,12 @@ body {
 .modal-title {
   color: #118C4E;
   font-size: 26px;
+}
+
+#registration-complete {
+  text-align: center;
+  color: white;
+  font-size: 28px;
 }
 
 /*    --------------------------------------------------
@@ -231,6 +241,8 @@ body {
   background-color: #FF9009;
   border-color: #FF9009;
   width: 185px;
+  height: 34px;
+  margin-left: 40px;
 }
 
 #activity-table {
@@ -239,6 +251,8 @@ body {
 
 #activity-table-header {
   display: none;
+  font-size: 22px;
+  margin-left: 40px;
 }
 
 #add-new-activity {
@@ -246,8 +260,22 @@ body {
   background-color: #FF9009;
   border-color: #FF9009;
   width: 185px;
+  height: 34px;
+  margin-left: 40px;
+}
+
+#activity-table-labels {
+  font-size: 16px;
 }
 
 #update-activity {
   display: none;
+}
+
+.submit {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: #FF9009;
+
 }
