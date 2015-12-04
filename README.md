@@ -73,7 +73,8 @@ A person who wants to organize a list of activities they want to do.
 
 **Navigation flow**
 
-*Register- user creation*
+Register user creation
+
 1. Login authentication
 2. City Location
 3. Activity Creation
@@ -93,4 +94,5 @@ A person who wants to organize a list of activities they want to do.
 
 
 **ERD**
+
 bucketlisters_front_end/styles/images/WDI-Project3-Bucketlisters-ERD.png
