@@ -58,8 +58,9 @@ $(document).ready(function() {
             // $('.register').hide();
             $('#reg-popup').modal('hide');
             $('.modal-backdrop').remove();
-            $('#landing-page-reg-button').hide();
+            // $('#landing-page-reg-button').hide();
             $('#registration-complete').show();
+            $('#login-popup').modal('show');
             // $('#logout-button-text').show();
             // $('.jumbotron').hide();
             // $('#activity-table-header').show();
@@ -83,7 +84,7 @@ $(document).ready(function() {
             });
             $('#login-popup').modal('hide');
             $('.modal-backdrop').remove();
-            $('#logout-button-text').show();
+            $('#logout-button-text').css('display', 'inline-block');
             $('.jumbotron').hide();
             $('#activity-table-header').show();
             $('#show-activity-list').show();

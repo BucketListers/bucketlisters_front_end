@@ -13,19 +13,11 @@ body {
   border-color: #585858;
 }
 
-#login-button-text {
-  display: inline-block;
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
-  color: white;
-  background-color: #585858;
-}
-
 #logout-button-text {
   display: none;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
-  color: white;
+  color: #FF9009;
   background-color: #585858;
 }
 
@@ -46,7 +38,6 @@ body {
 
 #landing-page-subhead {
   font-size: 28px;
-  text-shadow: 0 0 1px white;
   color: white;
 }
 
@@ -210,6 +201,12 @@ body {
   font-size: 26px;
 }
 
+#registration-complete {
+  text-align: center;
+  color: white;
+  font-size: 28px;
+}
+
 /*    --------------------------------------------------
   :: Registration Form Inputs & Buttons
   -------------------------------------------------- */
@@ -234,6 +231,7 @@ body {
   background-color: #FF9009;
   border-color: #FF9009;
   width: 185px;
+  margin-left: 40px;
 }
 
 #activity-table {
@@ -242,6 +240,8 @@ body {
 
 #activity-table-header {
   display: none;
+  font-size: 22px;
+  margin-left: 40px;
 }
 
 #add-new-activity {
@@ -249,6 +249,11 @@ body {
   background-color: #FF9009;
   border-color: #FF9009;
   width: 185px;
+  margin-left: 40px;
+}
+
+#activity-table-labels {
+  font-size: 16px;
 }
 
 #update-activity {
