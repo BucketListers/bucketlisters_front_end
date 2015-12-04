@@ -58,8 +58,8 @@ $(document).ready(function() {
             // $('.register').hide();
             $('#reg-popup').modal('hide');
             $('.modal-backdrop').remove();
-            $('#landing-page-reg-button').hide();
-            $('#registration-complete').show();
+            // $('#landing-page-reg-button').hide();
+            $('#login-popup').modal('show');
             // $('#logout-button-text').show();
             // $('.jumbotron').hide();
             // $('#activity-table-header').show();
@@ -83,7 +83,7 @@ $(document).ready(function() {
             });
             $('#login-popup').modal('hide');
             $('.modal-backdrop').remove();
-            $('#logout-button-text').show();
+            $('#logout-button-text').css('display', 'inline-block');
             $('.jumbotron').hide();
             $('#activity-table-header').show();
             $('#show-activity-list').show();
@@ -117,8 +117,10 @@ $(document).ready(function() {
             handleError(err,data);
             data.forEach(function(item){
               $('#activity-table tr:last').after(
-                '<tr data-id=' + item._id + '><td>' + item.name +  '</td><td>' + item.city + '</td><td><button class="edit btn btn-primary">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
+                '<tr data-id=' + item._id + '><td>' + item.name +  '</td><td>' + item.city + '</td><td><button class="edit btn btn-primary" data-toggle="modal" data-target="#update-activity-popup">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
             });
+            $('#update-activity-popup').modal('hide');
+            $('.modal-backdrop').remove();
             $('#show-activity-list').hide();
         });
     });
@@ -133,7 +135,9 @@ $(document).ready(function() {
         bucketList_api.createListItem(credentials, function(err, data){
           handleError(err,data);
           $('#activity-table tr:last').after(
-            '<tr data-id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td><td><button class="edit btn btn-primary">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
+            '<tr data-id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td><td><button class="edit btn btn-primary" data-toggle="modal" data-target="#update-activity-popup">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
+        $('#update-activity-popup').modal('hide');
+        $('.modal-backdrop').remove();
         });
     });
     $('#activity-table').on('click', function(event){
@@ -175,8 +179,10 @@ $(document).ready(function() {
           handleError(err,data);
           console.log('inside update AJAX');
           $('#activity-table tr:last').after(
-            '<tr data-id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td><td><button class="edit btn btn-primary">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
+            '<tr data-id=' + data._id + '><td>' + data.name +  '</td><td>' + data.city + '</td><td><button class="edit btn btn-primary" data-toggle="modal" data-target="#update-activity-popup">Edit</button></td><td><button class="delete btn btn-danger">Delete</button></td></tr>');
         });
+        $('#update-activity-popup').modal('hide');
+        $('.modal-backdrop').remove();
     });
 
 });
