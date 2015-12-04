@@ -9,6 +9,10 @@ body {
 }
 
 .nav-background {
+  border-radius: 0px;
+}
+
+.nav-background {
   background-color: #585858;
   border-color: #585858;
 }
@@ -184,6 +188,12 @@ body {
 #login-submit-button {
   background-color: #FF9009;
   border-color: #FF9009;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .4s linear;
+    transition: opacity .4s linear;
 }
 
 #reg-submit-button {

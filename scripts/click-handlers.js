@@ -59,7 +59,6 @@ $(document).ready(function() {
             $('#reg-popup').modal('hide');
             $('.modal-backdrop').remove();
             // $('#landing-page-reg-button').hide();
-            $('#registration-complete').show();
             $('#login-popup').modal('show');
             // $('#logout-button-text').show();
             // $('.jumbotron').hide();
